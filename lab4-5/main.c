@@ -29,8 +29,6 @@ int main()
             }
         }
     }
-    printf("Numerator: %.4lf\n", numerator);
-    printf("Denominator: %.4lf\n", denominator);
     y = numerator / denominator;
     printf("Answer is: %.4lf\n", y);
     return 0;
