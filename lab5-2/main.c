@@ -13,9 +13,20 @@ int main()
     {
         arr[i] = rand() % 100+1;
     }
+
+    printf("Array to calculate: ");
+    for (int i = 0; i < N; i++)
+    {
+        printf("%.2d", arr[i]);
+        if (i < (N - 1)) {
+            printf("; ");
+        }
+    }
+    printf("\n");
+    
     for (i = 0; i < N; i++)
     {
-        printf("Current element of array: %d\n", arr[i]);
+        // printf("Current element of array: %d\n", arr[i]);
         if (arr[i] % 2 == 0)
         {
             count_even++;
