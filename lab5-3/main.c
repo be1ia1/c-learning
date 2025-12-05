@@ -34,10 +34,10 @@ int main()
 
     printf("Array to compare\n");
     printf("--------------------------------------------------------------------------------------------------------------------\n");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 4; i++)
     {
         printf("%.2lf", array_to_compare[i]);
-        if (i < 4) {
+        if (i < 3) {
             printf(" | ");
         }
     }
