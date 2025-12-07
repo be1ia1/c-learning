@@ -10,7 +10,7 @@ int main()
     scanf("%lf %lf", &a, &b);
     x = a;
     h = 0.1 * (b - a);
-    for (x = 0; x <= b; x += h)
+    do
     {
         y = atan(x) / (1 + pow(x, 2));
         if (y < 0.4)
@@ -21,8 +21,8 @@ int main()
         {
             product_y *= y;
         }
-        // x += h;
-    }
+        x += h;
+    } while (x <= b);
     printf("Sum of y < 0.4: %.4lf\n", sum_y);
     printf("Product of y > 0.4: %.4lf\n", product_y);
     return 0;
