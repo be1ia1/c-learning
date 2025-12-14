@@ -40,65 +40,29 @@ int main()
         }
     }
 
-    // print one-dimensional (not sorted)
-    for (i = 0; i < N * N; i++)
-    {
-        printf("%2d ", b[i]);
-    }
-
     bubble_sort(b, sizeof(b) / sizeof(b[0]));
 
     printf("\n");
-    // print one-dimensional (sorted)
-    for (i = 0; i < N * N; i++)
-    {
-        printf("%2d ", b[i]);
-    }
-
-    printf("\n");
-    // k = 0;
-    // for (int j = 0; j < N; j++)
-    // {
-    //     if (j % 2 == 0)
-    //     {
-    //         for (int i = 0; i < N; i++)
-    //         {
-    //             answer[i][j] = b[k];
-    //             k++;
-    //         }
-    //     }
-    //     else
-    //     {
-    //         for (int i = N - 1; i >= 0; i--)
-    //         {
-    //             answer[i][j] = b[k];
-    //             k++;
-    //         }
-    //     }
-    // }
-
     k = 0;
-    for (int i = 0; i < N; i++)
+    for (int j = 0; j < N; j++)
     {
-        if (i % 2 == 0)
+        if (j % 2 == 0)
         {
-            for (j = 0; j < N; j++)
+            for (int i = 0; i < N; i++)
             {
                 answer[i][j] = b[k];
                 k++;
             }
-            
         }
         else
         {
-            for (j = N - 1; j >= 0; j--)
+            for (int i = N - 1; i >= 0; i--)
             {
                 answer[i][j] = b[k];
                 k++;
             }
         }
     }
-    
 
     printf("Snaked matrix:\n");
     for (i = 0; i < N; i++)
